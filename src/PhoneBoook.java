@@ -33,7 +33,7 @@ public class PhoneBoook {
 
             int id = 0;
             String name = "Basia";
-            String surname = "Wira";
+            String surname = "Kapica";
             String phoneNumber = "123456789";
             int age = 20;
             String contact = "     ";
