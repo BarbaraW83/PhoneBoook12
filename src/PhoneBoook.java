@@ -32,16 +32,16 @@ public class PhoneBoook {
         String name = "Basia";
         String surname = "Wira";
         String phoneNumber = "123456778";
-        String contact = "id;name;surname;age;phoneNumber";
         int age = 20;
+        String contact = (id + ";" + name +";" + surname +";" + age + ";" + phoneNumber);
         boolean isHidden = false;
 
 
-//        printContactCard(id, name, surname, age, phoneNumber);
-//        printContact(id, name, surname, age, phoneNumber);
-//        getContact(id, name, surname, age, phoneNumber);
+        printContactCard(id, name, surname, age, phoneNumber);
+        printContact(id, name, surname, age, phoneNumber);
+        getContact(id, name, surname, age, phoneNumber);
         printContactCard(contact);
-//        printContact(contact);
+        printContact(contact);
 
 
 
@@ -90,7 +90,6 @@ public class PhoneBoook {
     }
 
     static void printContactCard(String contact) {
-
         String[] afterChange = contact.split(";");
         for (int i = 0; i < afterChange.length; i++) {
             System.out.println(afterChange[i]);
@@ -107,6 +106,9 @@ public class PhoneBoook {
 
 
     }
+
+    
+
 //
 //    static String getContactRaw(int id, String name, String surname, int age, String number, int isMobile) {
 //
