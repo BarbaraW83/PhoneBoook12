@@ -17,14 +17,19 @@ public class ArraysHomework {
 
     public static void main(String[] args) {
         int[] lastDialed = {1, 4, 56, 12, 30, 45, 21, 890, 2, 3};
-        int valueFromUserInput = 2;
-        int valueId = 12;
+        int valueFromUserInput = 3;
+        int valueId = 2222;
+        int indexChangeValue = 2;
 
         getLastDialed(lastDialed);
        getLastDialed2(lastDialed,  valueFromUserInput);
        dial(lastDialed, valueId);
+//       dial2(lastDialed, valueId);
+        removeLastDialed(lastDialed,indexChangeValue);
+        rm2(lastDialed,indexChangeValue);
 
-       dial2(lastDialed,valueId);
+
+
     }
 
     static int getLastDialed(int[] tab) {
@@ -52,19 +57,20 @@ static int dial(int[] tab, int id){
 
         return tab[0];
 }
-//    static public void dial2(int[] tab, int id){
+//    static public void dial2(int[] tab, int id) {
 //        tab[0] = id;
 //        System.out.println(Arrays.toString(tab));
 
 //int removeLastDialed(int[] tab, int index) – ustawiającą wartość dla elementu tablicy, pod indeksem przekazanym jako argument,
 // na 0 (wartość index podawana jest w sposób ‘naturalny’ - od 1-10)
-//    static public int getLastDialed(int[] tab)
 
 
-    static int removeLastDialed(int[] tab, int index){
-
-        
-        return ;
+        static int removeLastDialed(int[] tab, int index){
+            tab[index] = 0;
+            return tab[index];
+        }
+        static public void rm2(int[] tab, int index){
+        tab[index] = 0;
+            System.out.println(Arrays.toString(tab));
+        }
     }
-
-}
