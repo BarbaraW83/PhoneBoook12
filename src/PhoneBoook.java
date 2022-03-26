@@ -139,7 +139,7 @@ if (contact.isEmpty()){
 
         System.out.println(id + ";" + name + ";" + surname + ";" + age + ";" + phoneNumber + ";" + isMobile);
 
-        return name;
+        return(id + ";" + name + ";" + surname + ";" + age + ";" + phoneNumber + ";" + isMobile);
     }
 
 }
