@@ -31,10 +31,13 @@ public class PhoneBoook {
         int id = 0;
         String name = "Basia";
         String surname = "Wira";
-        String phoneNumber = "123456778";
+        String phoneNumber = "12";
         int age = 20;
-        String contact = (id + ";" + name +";" + surname +";" + age + ";" + phoneNumber);
+        String contact = ("id: " + id + ";" +"name: "+  name +";" + "surname: " + surname +";" + "age: "+ age + ";" + "phoneNumber: " + phoneNumber);
         boolean isHidden = false;
+
+
+
 
 
         printContactCard(id, name, surname, age, phoneNumber);
@@ -43,8 +46,17 @@ public class PhoneBoook {
         printContactCard(contact);
         printContact(contact);
 
+        int isMobile = booleanNaInt(isHidden);
+        getContactRaw(id,name,surname, age, phoneNumber, isMobile);
 
 
+    }
+
+
+    public static int booleanNaInt(boolean isHidden) {
+        if (isHidden == true)
+            return 1;
+        return 0;
     }
 
 
@@ -94,7 +106,9 @@ public class PhoneBoook {
         for (int i = 0; i < afterChange.length; i++) {
             System.out.println(afterChange[i]);
         }
-
+if (contact.isEmpty()){
+    contact = "Nieznany";
+}
 
     }
 
@@ -104,19 +118,29 @@ public class PhoneBoook {
             System.out.print(str + "|");
         }
 
-
+        if (contact.isEmpty()){
+            contact = "Nieznany";
+        }
+        System.out.println("   ");
     }
 
-    
 
-//
-//    static String getContactRaw(int id, String name, String surname, int age, String number, int isMobile) {
-//
-//
-//        return getContactRaw(0, "Basia", "wira", 30, "233333333", 22).replace(",", ";");
-//
-//
-//    }
+    static String getContactRaw(int id, String name, String surname, int age, String phoneNumber, int isMobile) {
+
+        if((phoneNumber.length()>9) && (phoneNumber.length()<9) && (phoneNumber.length() != 0)){
+            phoneNumber = "000000000";
+        }  if (name.isEmpty() ){
+            name = "NIEZNANY";
+        }   if (surname.isEmpty()){
+            surname = "NIEZNANY";
+        } if  (phoneNumber.isEmpty()){
+            phoneNumber = "NIEZNANY";
+        }
+
+        System.out.println(id + ";" + name + ";" + surname + ";" + age + ";" + phoneNumber + ";" + isMobile);
+
+        return name;
+    }
 
 }
 
