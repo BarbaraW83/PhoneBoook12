@@ -25,26 +25,23 @@ public class PhoneBoook {
 //import java.lang.reflect.Array;
 //import java.util.Arrays;
 
-    //1 zadanie
-
 
     public static void main(String[] args) {
 
         int id = 0;
         String name = "Basia";
-        String surname = "WIra";
-        String phoneNumber = "123456789";
+        String surname = "Wira";
+        String phoneNumber = "123456778";
+        String contact = "id;name;surname;age;phoneNumber";
         int age = 20;
-        String contact = "     ";
         boolean isHidden = false;
 
 
-        printContactCard(id, name, surname, age, phoneNumber);
-        printContact(id, name, surname, age, phoneNumber);
-        getContact(id, name, surname, age, phoneNumber);
+//        printContactCard(id, name, surname, age, phoneNumber);
+//        printContact(id, name, surname, age, phoneNumber);
+//        getContact(id, name, surname, age, phoneNumber);
         printContactCard(contact);
-        printContact(contact);
-
+//        printContact(contact);
 
 
 
@@ -52,33 +49,47 @@ public class PhoneBoook {
 
 
     static void printContactCard(int id, String name, String surname, int age, String phoneNumber) {
-
+        if((phoneNumber.length()>9) && (phoneNumber.length()<9) && (phoneNumber.length() != 0)){
+            phoneNumber = "000000000";
+        }  if (name.isEmpty() ){
+            name = "NIEZNANY";
+        }   if (surname.isEmpty()){
+            surname = "NIEZNANY";
+        } if  (phoneNumber.isEmpty()){
+            phoneNumber = "NIEZNANY";
+        }
         System.out.println("Id: " + id + "\nImię: " + name + "\nNazwisko: " + surname + "\nWiek: " + age + "\nNumer telefonu: " + phoneNumber);
     }
 
     static void printContact(int id, String name, String surname, int age, String phoneNumber) {
+        if((phoneNumber.length()>9) && (phoneNumber.length()<9) && (phoneNumber.length() != 0)){
+            phoneNumber = "000000000";
+        }  if (name.isEmpty() ){
+            name = "NIEZNANY";
+        }   if (surname.isEmpty()){
+            surname = "NIEZNANY";
+        } if  (phoneNumber.isEmpty()){
+            phoneNumber = "NIEZNANY";
+        }
         System.out.println(id + "|" + name + "|" + surname + "|" + age + "|" + phoneNumber);
     }
 
     static String getContact(int id, String name, String surname, int age, String phoneNumber) {
+        if((phoneNumber.length()>9) && (phoneNumber.length()<9) && (phoneNumber.length() != 0)){
+            phoneNumber = "000000000";
+        }  if (name.isEmpty() ){
+            name = "NIEZNANY";
+        }   if (surname.isEmpty()){
+            surname = "NIEZNANY";
+        } if  (phoneNumber.isEmpty()){
+            phoneNumber = "NIEZNANY";
+        }
         return (id + "|" + surname + "|" + age + "|" + phoneNumber);
+
+
     }
 
-
-// 2 zadaniee
-//
-//        static void printContactCard(String contact) {
-//            contact = "id;name;surname;age;phoneNumber";
-//            String [] afterChange = contact.split(";");
-//            for (int i=0; i<afterChange.length; i++){
-//                System.out.println(afterChange[i]);
-//            }
-//        }
-
-
     static void printContactCard(String contact) {
-
-        contact = "id;name;surname;age;phoneNumber";
 
         String[] afterChange = contact.split(";");
         for (int i = 0; i < afterChange.length; i++) {
@@ -89,25 +100,21 @@ public class PhoneBoook {
     }
 
     static void printContact(String contact) {
-
-        contact = "id;name;surname;age;phoneNumber";
         String[] afterChange2 = contact.split(";");
-
         for (String str : afterChange2) {
             System.out.print(str + "|");
         }
 
 
     }
-
-    static String getContactRaw(int id, String name, String surname, int age, String number, int isMobile) {
-
-
-        return getContactRaw(0, "Basia", "wira", 30, "233333333", 22).replace(",", ";");
-
-
-    }
-
+//
+//    static String getContactRaw(int id, String name, String surname, int age, String number, int isMobile) {
+//
+//
+//        return getContactRaw(0, "Basia", "wira", 30, "233333333", 22).replace(",", ";");
+//
+//
+//    }
 
 }
 

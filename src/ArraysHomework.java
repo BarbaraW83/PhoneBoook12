@@ -26,7 +26,7 @@ public class ArraysHomework {
        dial(lastDialed, valueId);
 //       dial2(lastDialed, valueId);
         removeLastDialed(lastDialed,indexChangeValue);
-        rm2(lastDialed,indexChangeValue);
+//        rm2(lastDialed,indexChangeValue);
 
 
 
@@ -37,9 +37,6 @@ public class ArraysHomework {
         int firstElement = tab[0];
         return firstElement;
     }
-    //int getLastDialed(int[] tab, int index) – zwracającą wartość na przekazanej pozycji w tablicy (wartość index podawana jest w sposób ‘naturalny’ - od 1-10).
-// Jeśli na podanej pozycji nie ma prawidłowego id (wartość różna od 0) zwróć 0  i wyświetl odpowiedni komunikat
-//
 
   static int getLastDialed2(int[] tab, int index) {
         if ((index >= tab.length) || (index < 0))
@@ -50,8 +47,7 @@ public class ArraysHomework {
             }
       return index;
   }
-//int dial(int[] tab, int id) – ustawiającą przekazaną wartość na pierwszej pozycji w tablicy
-//
+
 static int dial(int[] tab, int id){
         tab[0] = id;
 
@@ -61,16 +57,13 @@ static int dial(int[] tab, int id){
 //        tab[0] = id;
 //        System.out.println(Arrays.toString(tab));
 
-//int removeLastDialed(int[] tab, int index) – ustawiającą wartość dla elementu tablicy, pod indeksem przekazanym jako argument,
-// na 0 (wartość index podawana jest w sposób ‘naturalny’ - od 1-10)
-
 
         static int removeLastDialed(int[] tab, int index){
             tab[index] = 0;
             return tab[index];
         }
-        static public void rm2(int[] tab, int index){
-        tab[index] = 0;
-            System.out.println(Arrays.toString(tab));
-        }
+//        static public void rm2(int[] tab, int index){
+//        tab[index] = 0;
+//            System.out.println(Arrays.toString(tab));
+//        }
     }
