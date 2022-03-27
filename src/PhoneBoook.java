@@ -25,7 +25,6 @@ public class PhoneBoook {
 //import java.lang.reflect.Array;
 //import java.util.Arrays;
 
-
     public static void main(String[] args) {
 
         int id = 0;
@@ -35,10 +34,6 @@ public class PhoneBoook {
         int age = 20;
         String contact = ( id + ";" + name +";"  + surname + ";" +age + ";" + phoneNumber);
         boolean isHidden = false;
-
-
-
-
 
         printContactCard(id, name, surname, age, phoneNumber);
         printContact(id, name, surname, age, phoneNumber);
@@ -106,9 +101,8 @@ public class PhoneBoook {
         for (int i = 0; i < afterChange.length; i++) {
             System.out.println(afterChange[i]);
         }
-
-if (contact.isEmpty()){
-    contact = "Nieznany";
+        if (contact.isEmpty()){
+        contact = "Nieznany";
 }
 
     }

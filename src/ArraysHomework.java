@@ -22,13 +22,9 @@ public class ArraysHomework {
         int indexChangeValue = 2;
 
         getLastDialed(lastDialed);
-       getLastDialed2(lastDialed,  valueFromUserInput);
-       dial(lastDialed, valueId);
-//       dial2(lastDialed, valueId);
+        getLastDialed2(lastDialed,  valueFromUserInput);
+        dial(lastDialed, valueId);
         removeLastDialed(lastDialed,indexChangeValue);
-//        rm2(lastDialed,indexChangeValue);
-
-
 
     }
 
@@ -53,17 +49,11 @@ static int dial(int[] tab, int id){
 
         return tab[0];
 }
-//    static public void dial2(int[] tab, int id) {
-//        tab[0] = id;
-//        System.out.println(Arrays.toString(tab));
 
 
         static int removeLastDialed(int[] tab, int index){
             tab[index] = 0;
             return tab[index];
         }
-//        static public void rm2(int[] tab, int index){
-//        tab[index] = 0;
-//            System.out.println(Arrays.toString(tab));
-//        }
+
     }
