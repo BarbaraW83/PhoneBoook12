@@ -31,9 +31,9 @@ public class PhoneBoook {
         int id = 0;
         String name = "Basia";
         String surname = "Wira";
-        String phoneNumber = "12";
+        String phoneNumber = "123456789";
         int age = 20;
-        String contact = ("id: " + id + ";" +"name: "+  name +";" + "surname: " + surname +";" + "age: "+ age + ";" + "phoneNumber: " + phoneNumber);
+        String contact = ( id + ";" + name +";"  + surname + ";" +age + ";" + phoneNumber);
         boolean isHidden = false;
 
 
@@ -53,7 +53,7 @@ public class PhoneBoook {
     }
 
 
-    public static int booleanNaInt(boolean isHidden) {
+    static int booleanNaInt(boolean isHidden) {
         if (isHidden == true)
             return 1;
         return 0;
@@ -61,7 +61,7 @@ public class PhoneBoook {
 
 
     static void printContactCard(int id, String name, String surname, int age, String phoneNumber) {
-        if((phoneNumber.length()>9) && (phoneNumber.length()<9) && (phoneNumber.length() != 0)){
+        if((phoneNumber.length() != 8) && (phoneNumber.length() != 0)) {
             phoneNumber = "000000000";
         }  if (name.isEmpty() ){
             name = "NIEZNANY";
@@ -74,7 +74,7 @@ public class PhoneBoook {
     }
 
     static void printContact(int id, String name, String surname, int age, String phoneNumber) {
-        if((phoneNumber.length()>9) && (phoneNumber.length()<9) && (phoneNumber.length() != 0)){
+        if((phoneNumber.length() != 8) && (phoneNumber.length() != 0)){
             phoneNumber = "000000000";
         }  if (name.isEmpty() ){
             name = "NIEZNANY";
@@ -87,7 +87,7 @@ public class PhoneBoook {
     }
 
     static String getContact(int id, String name, String surname, int age, String phoneNumber) {
-        if((phoneNumber.length()>9) && (phoneNumber.length()<9) && (phoneNumber.length() != 0)){
+        if((phoneNumber.length() != 8) && (phoneNumber.length() != 0)){
             phoneNumber = "000000000";
         }  if (name.isEmpty() ){
             name = "NIEZNANY";
@@ -106,6 +106,7 @@ public class PhoneBoook {
         for (int i = 0; i < afterChange.length; i++) {
             System.out.println(afterChange[i]);
         }
+
 if (contact.isEmpty()){
     contact = "Nieznany";
 }
@@ -127,7 +128,7 @@ if (contact.isEmpty()){
 
     static String getContactRaw(int id, String name, String surname, int age, String phoneNumber, int isMobile) {
 
-        if((phoneNumber.length()>9) && (phoneNumber.length()<9) && (phoneNumber.length() != 0)){
+        if((phoneNumber.length() != 8) && (phoneNumber.length() != 0)){
             phoneNumber = "000000000";
         }  if (name.isEmpty() ){
             name = "NIEZNANY";
