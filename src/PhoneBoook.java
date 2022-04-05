@@ -131,10 +131,11 @@ public class PhoneBoook {
         } if  (phoneNumber.isEmpty()){
             phoneNumber = "NIEZNANY";
         }
+        String newVar = id + ";" + name + ";" + surname + ";" + age + ";" + phoneNumber + ";" + isMobile;
 
-        System.out.println(id + ";" + name + ";" + surname + ";" + age + ";" + phoneNumber + ";" + isMobile);
+        System.out.println(newVar);
 
-        return(id + ";" + name + ";" + surname + ";" + age + ";" + phoneNumber + ";" + isMobile);
+        return(newVar);
     }
 
 }
